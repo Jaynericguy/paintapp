@@ -1,3 +1,11 @@
+Hi this is James Witts application to a paint calculator illustrated below.
+Please run the main python file from idle or the editor/ide of your choice.
+How to use is written in the source code inline comments.
+The task took me just short of 2hrs to complete. I would like to further develope it to have it running 
+in docker in a web app on ec2 or raspberrypi from my home network
+
+========
+
 Software Challenge
 Software Challenge - Paint Calculator
 Purpose
