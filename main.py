@@ -24,7 +24,7 @@ class Room:
     def calculateFloorArea(self):
         return self.width*self.depth
     def calculateRoomVolume(self):
-        return self.width*self.depth*self.width*self.height
+        return self.width*self.depth*self.height
 def roominateFun(*args):
     room = Room(args)
     rooms.append(room)
