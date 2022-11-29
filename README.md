@@ -1,6 +1,6 @@
 Hi this is James Witts application to a paint calculator
 
-docker run <<<--platform linux/arm64/v8>>> -p 80:80 -d jaynericguy/paintapp
+docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
 
 Alteratively see it in action here::: http://junder.ddns.net/
 
