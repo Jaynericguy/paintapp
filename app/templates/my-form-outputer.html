@@ -2,10 +2,10 @@
  
 {% block body %}
  
-<p>Here are the results... width:::{{room.width}} depth:::{{room.depth}} height:::{{room.height}}</p><br>
-<p>Paint required for the walls:::{{room.calculatePaintWalls()}}</p><br>
-<p>Floor area:::{{room.calculateFloorArea()}}</p><br>
-<p>Room volume:::{{room.calculateRoomVolume()}}</p>
+<p>Here are the results... width:::{{room.width}}m depth:::{{room.depth}}m height:::{{room.height}}m</p><br>
+<p>Paint required for the walls:::{{room.calculatePaintWalls()}}m2</p><br>
+<p>Floor area:::{{room.calculateFloorArea()}}m2</p><br>
+<p>Room volume:::{{room.calculateRoomVolume()}}m3</p>
  
 {% endblock %}
 
