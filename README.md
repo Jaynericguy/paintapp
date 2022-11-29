@@ -1,3 +1,9 @@
+Hi this is James Witts application to a paint calculator
+
+docker run -p 80:80 -d jaynericguy/paintapp
+
+=====
+
 Hi this is James Witts application to a paint calculator illustrated below.
 Please run the main python file from idle or the editor/ide of your choice.
 How to use is written in the source code inline comments.
