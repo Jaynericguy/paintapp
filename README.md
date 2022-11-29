@@ -4,8 +4,6 @@ docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
 
 Alteratively see it in action here::: http://junder.ddns.net/
 
-![Input data](flask%20app%20555%20input.png?raw=true "Input") ![Output data](flask%20app%20555%20results.png?raw=true "Output")
-
 =====
 
 Hi this is James Witts application to a paint calculator illustrated below.
