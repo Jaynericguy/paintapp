@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+ 
+{% block body %}
+ 
+<p>Here are the results... width:::{{room.width}} depth:::{{room.depth}} height:::{{room.height}}</p><br>
+<p>Paint required for the walls:::{{room.calculatePaintWalls()}}</p><br>
+<p>Floor area:::{{room.calculateFloorArea()}}</p><br>
+<p>Room volume:::{{room.calculateRoomVolume()}}</p>
+ 
+{% endblock %}
+

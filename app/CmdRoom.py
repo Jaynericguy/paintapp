@@ -8,10 +8,9 @@
 # /______________|  /depth  
 # /______________| /   
 # /______________|/ 
-import unittest
 #Currently runs in single characters only with no spaces on the command line
 #for example, 123, is equivalent to width height and depth 1 2 3.
-class Room:
+class CmdRoom:
     def __init__(self, args):
         self.depth = int(args[0][0])
         self.height = int(args[0][1])
@@ -26,7 +25,7 @@ class Room:
     def calculateRoomVolume(self):
         return self.width*self.depth*self.height
 def roominateFun(*args):
-    room = Room(args)
+    room = CmdRoom(args)
     rooms.append(room)
     for j in rooms:
         ###calculates everytime the room is added so might need to tweak at large scales of room numbers
