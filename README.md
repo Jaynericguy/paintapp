@@ -2,6 +2,8 @@ Hi this is James Witts application to a paint calculator
 
 docker run -p 80:80 -d jaynericguy/paintapp
 
+Alteratively see it in action here::: http://junder.ddns.net/
+
 =====
 
 Hi this is James Witts application to a paint calculator illustrated below.

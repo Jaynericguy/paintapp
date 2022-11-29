@@ -4,11 +4,7 @@ from FlaskRoom import *
 
 app = Flask(__name__)
 
-@app.route('/')
-def my_form():
-	return render_template("my-form-inputer.html")
-
-@app.route("/paintapp", methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def paintapp():
 	if request.method == 'POST':
 		w = request.form['width']
