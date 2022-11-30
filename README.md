@@ -1,4 +1,4 @@
-Hi this is James Witts application to a paint calculator
+Hi this is James Witts application to a paint calculator written with python
 
 docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
 
