@@ -1,7 +1,3 @@
-Flask or django decisions...
-
-======
-
 Hi this is James Witts application to a paint calculator
 
 docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
