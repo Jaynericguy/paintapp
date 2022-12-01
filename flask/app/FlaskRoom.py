@@ -9,7 +9,7 @@
 # /______________| /   
 # /______________|/ 
 #For use with flask in a dockerfile
-class FlaskRooms:
+class FlaskRoom:
     def __init__(self, w=0, d=0, h=0):
         self.width = float(w)
         self.depth = float(d)

@@ -1,1 +1,2 @@
-/app/static/*
+/flask/app/static/*
+/flask/docker-compose.yml
