@@ -1,8 +1,10 @@
 Hi this is James Witts application to a paint calculator
 
-docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
+run the flask app with ::: docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
 
 Alteratively see it in action here::: http://junder.ddns.net/
+
+Or use it locally ::: python CmdRoom.py
 
 =====
 
