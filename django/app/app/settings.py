@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -76,10 +77,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "postgres",  # set in docker-compose.yml
+        "NAME": "rooms",
+        "USER": "junder",
+        "PASSWORD": "junder",
+        "HOST": "db",  # set in docker-compose.yml
         "PORT": 5432,  # default postgres port
     }
 }

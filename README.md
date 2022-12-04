@@ -1,3 +1,14 @@
+Navigate to the django dir then run:::
+
+docker-compose up -d --build
+docker-compose exec web python manage.py migrate
+docker-compose exec web manage.py createsuperuser
+
+
+,for local development with postgresql docker services currently excluded from the git.
+
+====
+
 Hi this is James Witts application to a python paint calculator
 
 run the flask app with ::: docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
