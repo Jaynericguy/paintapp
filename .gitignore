@@ -1,2 +1,2 @@
 /flask/app/static/*
-/flask/docker-compose.yml
+/django/docker-compose.yml
