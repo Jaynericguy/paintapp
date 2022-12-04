@@ -1,9 +1,22 @@
-Navigate to the django dir then run:::
+#used to interact with the database from docker shell
+>>> python manage.py shell    
+>>> from app.models import Room
+>>> Room
+>>> room.name = "room_one"
+>>> room.width = 1
+>>> room.depth = 1 # set everything to avoid not null exception
+>>> room.height = 1
+>>> room.save()
+>>> Room.objects.all()[0].name
 
+===
+
+>>>Navigate to the django dir then run:::
+>>>https://stackoverflow.com/questions/36153748/django-makemigrations-no-changes-detected
+
+python manage.py makemigrations <myapp>
 docker-compose up -d --build
 docker-compose exec web python manage.py migrate
-docker-compose exec web manage.py createsuperuser
-
 
 ,for local development with postgresql docker services currently excluded from the git.
 
