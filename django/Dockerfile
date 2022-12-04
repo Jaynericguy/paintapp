@@ -7,6 +7,5 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 WORKDIR /app
 
-ENTRYPOINT ["python3"]
-CMD ["manage.py", "runserver"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000
