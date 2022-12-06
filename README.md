@@ -1,6 +1,8 @@
 === THE TASK ===
 >Software Challenge - Paint Calculator
+
 Purpose
+
 The purpose of this software challenge is to give you an opportunity to showcase how you think code should be written. It should be a demonstration of your skills and opinions.
 Instructions
 
