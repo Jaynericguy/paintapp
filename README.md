@@ -24,20 +24,17 @@ Volume of the room
 
 === FONTEND SECTION ===
 >used to interact with the database from docker shell
->>> python manage.py shell    
->>> from app.models import Room
->>> Room
->>> room.name = "room_one"
->>> room.width = 1
->>> room.depth = 1 # set everything to avoid not null exception
->>> room.height = 1
->>> room.save()
->>> Room.objects.all()[0].name
+python manage.py shell    
+from app.models import Room
+room.name = "room_one"
+room.width = 1
+room.depth = 1 # set everything to avoid not null exception
+room.height = 1
+room.save()
+Room.objects.all()[0].name
 
 === BACKEND SECTION ===
->>>Navigate to the django dir then run:::
->>>https://stackoverflow.com/questions/36153748/django-makemigrations-no-changes-detected
-
+>Navigate to the django dir then run:::
 python manage.py makemigrations <myapp>
 docker-compose up -d --build
 docker-compose exec web python manage.py migrate
