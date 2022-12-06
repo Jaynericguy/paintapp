@@ -1,7 +1,6 @@
-=== THE TASK ===
->Software Challenge - Paint Calculator
+> === THE TASK ===
 
-Purpose
+Software Challenge - Paint Calculator
 
 The purpose of this software challenge is to give you an opportunity to showcase how you think code should be written. It should be a demonstration of your skills and opinions.
 Instructions
@@ -24,8 +23,9 @@ Area of the floor
 Amount of paint required to paint the walls
 Volume of the room
 
-=== FONTEND SECTION ===
->used to interact with the database from docker shell
+> === FONTEND SECTION ===
+
+used to interact with the database from docker shell
 
 python manage.py shell    
 from app.models import Room
@@ -36,8 +36,9 @@ room.height = 1
 room.save()
 Room.objects.all()[0].name
 
-=== BACKEND SECTION ===
->Navigate to the django dir then run:::
+> === BACKEND SECTION ===
+
+Navigate to the django dir then run:::
 
 python manage.py makemigrations <myapp>
 docker-compose up -d --build
