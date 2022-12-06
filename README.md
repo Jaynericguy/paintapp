@@ -1,6 +1,6 @@
 > === THE TASK ===
 
-http://junder.ddns.net
+See it in action ::: http://junder.ddns.net
 
 Software Challenge - Paint Calculator
 
