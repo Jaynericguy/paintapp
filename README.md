@@ -26,6 +26,7 @@ Volume of the room
 
 === FONTEND SECTION ===
 >used to interact with the database from docker shell
+
 python manage.py shell    
 from app.models import Room
 room.name = "room_one"
@@ -37,6 +38,7 @@ Room.objects.all()[0].name
 
 === BACKEND SECTION ===
 >Navigate to the django dir then run:::
+
 python manage.py makemigrations <myapp>
 docker-compose up -d --build
 docker-compose exec web python manage.py migrate
