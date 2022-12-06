@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+ 
+{% block body %}
+ 
+<p>{{ data }}</p>
+<ul>
+{% for i in list %}
+<li><a href="{{i.slug}}">{{ i }}</a></li>
+{% endfor %}
+
+{% endblock %}

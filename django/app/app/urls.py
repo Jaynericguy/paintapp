@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import geeks_view  #importing our view file 
+from . import views  #importing our view file
 urlpatterns = [
+    path('', views.viewHome), #mapping the homepage function
     path('admin/', admin.site.urls),
-    path('', geeks_view), #mapping the homepage function
-]
+    path('viewRooms/', views.viewRooms), #mapping the homepage function
+    path('addRooms/', views.addRooms), #mapping the homepage function
+    path('viewRooms/<slug:slug>/', views.viewRoom)]

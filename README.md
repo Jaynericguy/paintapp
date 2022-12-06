@@ -1,51 +1,9 @@
-#used to interact with the database from docker shell
->>> python manage.py shell    
->>> from app.models import Room
->>> Room
->>> room.name = "room_one"
->>> room.width = 1
->>> room.depth = 1 # set everything to avoid not null exception
->>> room.height = 1
->>> room.save()
->>> Room.objects.all()[0].name
-
-===
-
->>>Navigate to the django dir then run:::
->>>https://stackoverflow.com/questions/36153748/django-makemigrations-no-changes-detected
-
-python manage.py makemigrations <myapp>
-docker-compose up -d --build
-docker-compose exec web python manage.py migrate
-
-,for local development with postgresql docker services currently excluded from the git.
-
-====
-
-Hi this is James Witts application to a python paint calculator
-
-run the flask app with ::: docker run --platform linux/arm64/v8 -p 80:80 -d jaynericguy/paintapp
-
-Alteratively see it in action here::: http://junder.ddns.net/
-
-Or use it locally ::: python CmdRoom.py
-
-=====
-
-Hi this is James Witts application to a paint calculator illustrated below.
-Please run the main python file from idle or the editor/ide of your choice.
-How to use is written in the source code inline comments.
-The task took me just short of 2hrs to complete. I would like to further develope it to have it running 
-in docker in a web app on ec2 or raspberrypi from my home network
-
-========
-
-Software Challenge
+=== THE TASK ===
 Software Challenge - Paint Calculator
 Purpose
 The purpose of this software challenge is to give you an opportunity to showcase how you think code should be written. It should be a demonstration of your skills and opinions.
-
 Instructions
+
 The solution should be completed using a TDD approach
 Consider the use of comments where appropriate
 Ensure your code is clean and readable. We value readable code over “clever” solutions
@@ -63,3 +21,30 @@ Write a program that takes as input the dimensions of a room and outputs the fol
 Area of the floor
 Amount of paint required to paint the walls
 Volume of the room
+
+=== FONTEND SECTION ===
+#used to interact with the database from docker shell
+>>> python manage.py shell    
+>>> from app.models import Room
+>>> Room
+>>> room.name = "room_one"
+>>> room.width = 1
+>>> room.depth = 1 # set everything to avoid not null exception
+>>> room.height = 1
+>>> room.save()
+>>> Room.objects.all()[0].name
+
+=== BACKEND SECTION ===
+>>>Navigate to the django dir then run:::
+>>>https://stackoverflow.com/questions/36153748/django-makemigrations-no-changes-detected
+
+python manage.py makemigrations <myapp>
+docker-compose up -d --build
+docker-compose exec web python manage.py migrate
+
+,for local development with postgresql docker services currently excluded from the git.
+
+docker-compose exec web python manage.py createsuperuser
+(((root githubpass)))
+
+DELETE FROM public.app_room

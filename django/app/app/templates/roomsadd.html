@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+ 
+{% block body %}
+ 
+<p>Add a room</p>
+<form action = "" method = "post">
+    {% csrf_token %}
+    {{form }}
+    <input type="submit" value=Submit>
+</form>
+
+{% endblock %}
