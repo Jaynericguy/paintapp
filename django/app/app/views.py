@@ -4,7 +4,7 @@ from app.models import Room
 from app.forms import RoomForm
 # create a function
 def viewHome(request):
-    return render(request, "index.html")
+    return render(request, "home.html")
 
 # create a function
 def viewRooms(request):

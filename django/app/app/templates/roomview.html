@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
  
 {% block body %}
-<p>{{ data }} || <input type="submit" value=Edit> || <input type="submit" value=Delete></p>
+<p>{{ data }}. Click on a room to see its details...</p>
 <ul>
 {% for i in list %}
 {{ i.name }}
@@ -12,4 +12,5 @@
 <li>calculate the floor area: {{ i.calculateFloorArea }}</li>
 <li>calculate the volume: {{ i.calculateRoomVolume }}</li>
 {% endfor %}
+<input type="submit" value=Edit><input type="submit" value=Delete>
 {% endblock %}
