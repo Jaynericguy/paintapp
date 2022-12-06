@@ -43,5 +43,5 @@ docker-compose exec web python manage.py migrate
 
 docker-compose exec web python manage.py createsuperuser
 (((root githubpass)))
-
+  
 DELETE FROM public.app_room
