@@ -52,3 +52,7 @@ docker-compose exec web python manage.py createsuperuser
 (((root githubpass)))
   
 DELETE FROM public.app_room
+  
+> === PI it ===
+
+DOCKER_BUILDKIT=1 docker build . -t jaynericguy/paintapp-django-armv8
