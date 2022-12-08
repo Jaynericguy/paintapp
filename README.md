@@ -55,7 +55,10 @@ DELETE FROM public.app_room
   
 > === USEFUL COMMANDS ===
 
-docker-compose up -d
-docker-compose down
-DOCKER_BUILDKIT=1 docker build . -t jaynericguy/paintapp-django-armv8
-docker push jaynericguy/paintapp-django-armv8
+  docker-compose up -d
+
+  docker-compose down
+
+  DOCKER_BUILDKIT=1 docker build . -t jaynericguy/paintapp-django-armv8
+
+  docker push jaynericguy/paintapp-django-armv8
