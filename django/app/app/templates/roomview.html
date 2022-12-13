@@ -12,5 +12,8 @@
 <li>calculate the floor area: {{ i.calculateFloorArea }}</li>
 <li>calculate the volume: {{ i.calculateRoomVolume }}</li>
 {% endfor %}
-<input type="submit" value=Edit><input type="submit" value=Delete>
+<form action = "" method = "post">
+  {% csrf_token %}
+  <input type="submit" value=Delete>
+</form>
 {% endblock %}
