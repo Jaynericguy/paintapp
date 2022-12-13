@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_@5g06i6k86zkqwus^gapf_h2&-5ptqh#7w6@!9ldmq(fc65zl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['junder.ddns.net']
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "rooms",
+        "NAME": "postgres",
         "USER": "junder",
         "PASSWORD": "junder",
         "HOST": "db",  # set in docker-compose.yml
