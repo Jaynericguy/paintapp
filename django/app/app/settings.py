@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-_@5g06i6k86zkqwus^gapf_h2&-5ptqh#7w6@!9ldmq(fc65zl
 DEBUG = True
 
 ALLOWED_HOSTS = ['junder.ddns.net']
+CSRF_TRUSTED_ORIGINS = ['https://junder.ddns.net', 'https://www.junder.ddns.net']
 
 
 # Application definition
