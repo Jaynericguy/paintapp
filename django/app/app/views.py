@@ -21,7 +21,7 @@ def viewRoom(request, slug):
     }
     if request.method == 'POST':
         room.delete()
-        return redirect('/viewRooms/')
+        return redirect('viewRooms')
     else:
         return render(request, "roomview.html", context)
 
@@ -40,7 +40,7 @@ def addRooms(request):
             obj.depth = form.cleaned_data['depth']
             obj.height = form.cleaned_data['height']
             obj.save()
-            return redirect('/viewRooms/')
+            return redirect('viewRooms')
         else:
             pass
     else:
