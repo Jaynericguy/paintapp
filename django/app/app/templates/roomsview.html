@@ -5,7 +5,7 @@
 <p>{{ data }}. Click on a room to see its details...</p>
 <ul>
 {% for i in list %}
-<li><a href="{{i.slug}}">{{ i }}</a></li>
+<li><a href="{% url 'slugRoom' i.slug %}">{{ i }}</a></li>
 {% endfor %}
 
 {% endblock %}
