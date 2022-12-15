@@ -25,10 +25,11 @@ Area of the floor
 Amount of paint required to paint the walls
 Volume of the room
 
-> === FONTEND SECTION ===
+> === PI APP FONTEND SECTION ===
 
-used to interact with the database from docker shell
+used to interact with the database from docker shell in the front end
 
+python manage.py makemigrations <myapp>
 python manage.py shell    
 from app.models import Room
 room.name = "room_one"
@@ -38,11 +39,9 @@ room.height = 1
 room.save()
 Room.objects.all()[0].name
 
-> === BACKEND SECTION ===
+> === PAINT APP BACKEND SECTION ===
 
 Navigate to the django dir then run:::
-
-python manage.py makemigrations <myapp>
 docker-compose up -d --build
 docker-compose exec web python manage.py migrate
 
@@ -62,3 +61,5 @@ DELETE FROM public.app_room
   DOCKER_BUILDKIT=1 docker build . -t jaynericguy/paintapp-django-armv8
 
   docker push jaynericguy/paintapp-django-armv8
+
+
