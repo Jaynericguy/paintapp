@@ -1,6 +1,6 @@
 > === THE TASK ===
 
-See my django app and postgres backend here... https://junder.ddns.net/paintapp/ ==> Need to be able to edit and remove the rooms otherwise all is working and took me about 6hrs total time to get to where it is now 
+See my django app and postgres backend here... https://app.junder.ddns.net/paintapp/ ==> Need to be able to edit and remove the rooms otherwise all is working and took me about 6hrs total time to get to where it is now 
 
 Software Challenge - Paint Calculator
 
