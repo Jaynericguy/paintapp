@@ -1,6 +1,6 @@
 > === THE TASK ===
 
-See my django app and postgres backend here... https://junder.ddns.net/paintapp/ ==> Need to be able to edit and remove the rooms otherwise all is working and took me about 6hrs total time to get to where it is now 
+See my django app and postgres backend here... https://paint.junder.app/paintapp/ ==> Need to be able to edit and remove the rooms otherwise all is working and took me about 6hrs total time to get to where it is now 
 
 Software Challenge - Paint Calculator
 
@@ -59,6 +59,7 @@ DELETE FROM public.app_room
   docker-compose down
 
   DOCKER_BUILDKIT=1 docker build . -t jaynericguy/paintapp-django-armv8
+  docker build . -t jaynericguy/paintapp-django-armv8 --platform linux/arm64/v8
 
   docker push jaynericguy/paintapp-django-armv8
 
