@@ -1,6 +1,6 @@
 === THE TASK ===  
 
-See my django app and postgres backend here... https://paint.junder.app/paintapp/  
+See my django app and postgres backend here... https://paint.jabl3s.uk 
 
 === USEFUL COMMANDS ===  
 DOCKER_BUILDKIT=1 docker build . -t jaynericguy/paintapp-django-armv8  
