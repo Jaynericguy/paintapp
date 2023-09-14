@@ -13,7 +13,7 @@ Note, when serving static content like images or gif django is less prefered, id
 
 === THE TASK ===  
   
-Django + postgres  ==> Ive configured django with postgres so that any room created gets its own slug stored in the database, and it dynamically creates a url path specifically for that rooms created page from django template, potentially allowing for as many rooms as the slug randomness or database size constraints allows for.  
+Django + postgres  ==> Ive configured django with postgres in such a way that any room created by the app has a dynamically created page / unique url. It is made from a django template, model and associated slug. Sed url-slug is stored alogside its django model information in the postgres databse i.e. width, height, depth and slug is all thats required in the actual store for the model to operate on, potentially allowing for as many rooms as the slug randomness or database size constraints allows for, so quite a lot knowing postgres with such minimal info.     
   
 === USEFUL COMMANDS ===  
 DOCKER_BUILDKIT=1 docker build . -t jabl3s/paintapp-django-armv8  
