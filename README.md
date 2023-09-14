@@ -8,7 +8,7 @@ Note, when serving static content like images or gif django is less prefered, id
 /django/app/app/settings.py ==> only tweaks have been made here, further tweaks need to be made to hide .envs for this .py file.  
 /django/app/app/veiws.py  
 /django/app/app/static/gif/room.gif  
-/django/app/app/templates/((home, index, roomsview, roomview, roomsadd)).html
+/django/app/app/templates/((home, index, roomsview, roomview, roomsadd)).html  
 /django/app/app/migrations/((0001...,0002...0003...,)).py ==> can simply run django migrations to interact with postgres database, in past ive manually had to update entries in postgres production environments for sentry users to get them access at old workspace.  
 
 === THE TASK ===  
