@@ -1,5 +1,5 @@
-# Note this is just the starting point for what is eventually to be used in django models and holds no part to play in the actual app at run time...  
-#A room isnt always going to be a perfect square
+# NOTE, this is just the starting point for what is eventually to be used in django models and holds no part to play in the actual app at run time...  
+# A room isnt always going to be a perfect square
 #     _______________
 #    /              /|
 #   /              / |
@@ -9,8 +9,8 @@
 # /______________|  /depth  
 # /______________| /   
 # /______________|/ 
-#Currently runs in single characters only with no spaces on the command line
-#for example, 123, is equivalent to width height and depth 1 2 3.
+# Currently runs in single characters only with no spaces on the command line
+# for example, 123, is equivalent to width height and depth 1 2 3.
 class CmdRoom:
     def __init__(self, args):
         self.depth = int(args[0][0])
