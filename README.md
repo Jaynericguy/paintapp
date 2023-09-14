@@ -1,4 +1,4 @@
-=== Creation / edits have been made by jabl3s to the following files listed below ===  
+=== Creation / edits have been made by jabl3s here ===  
   
 /django/app/ap/forms.py  
 /django/app/app/urls.py  
