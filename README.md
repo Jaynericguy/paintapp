@@ -13,7 +13,7 @@ Note, when serving static content like images or gif django is less prefered, id
 
 === THE TASK ===  
   
-Django + postgres  ==> Ive configured django with postgres in such a way that any room created by the app is stored in the postgres databse just as width, height, depth and slug. This allows for my django model to operate freely on this information to get volume etc etc. This url-slug is also all the information that is needed in store to dynamically create the page to view/update individual rooms width, height, depth information in the database. 
+Django + postgres  ==> Ive configured django with postgres in such a way that any room created by the app is stored in the postgres databse just as width, height, depth and slug. This allows for my django model to operate freely on this information to get volume etc etc. This url-slug is also all the information that is needed in store to dynamically create the page to view/update individual rooms width, height, depth information in the database via my models methods.  
   
 This django app creates and stores as many rooms as the slug randomness or database size constraints for width height depth slug allows, so quite a lot knowing postgres with such minimal info. Has been succesfully working in my rke cluster to modify any rooms I create, missing functionality screenshots/demo  :c         
   
