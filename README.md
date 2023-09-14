@@ -1,9 +1,9 @@
 === Creation / edits have been made by jabl3s here ===  
   
-/django/app/ap/forms.py  
+/django/app/app/forms.py  
 /django/app/app/urls.py  
 /django/app/app/models.py  
-/django/app/app/settings.py ==> tweaks have been made here and further tweaks nee to be made to be hide .envs for this .py file.  
+/django/app/app/settings.py ==> only tweaks have been made here, further tweaks need to be made to hide .envs for this .py file.  
 /django/app/app/veiws.py  
 /django/app/app/static/gif/room.gif
 /django/app/app/templates/((home, index, roomsview, roomview, roomsadd)).html
