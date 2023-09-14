@@ -1,4 +1,5 @@
 === Creation / edits have been made by jabl3s here ===  
+  
 Note, when serving static content like images or gif django is less prefered, ideally use s3 bucket or whatever like in my aws project, then simply link to with href...  
   
 /django/app/app/forms.py  
