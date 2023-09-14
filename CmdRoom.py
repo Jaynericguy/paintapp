@@ -10,7 +10,7 @@
 # /______________| /   
 # /______________|/ 
 # Currently runs in single characters only with no spaces on the command line
-# for example, 123, is equivalent to width height and depth 1 2 3.
+# for example, 123, is equivalent to width height and depth 1 2 3 respectively.
 class CmdRoom:
     def __init__(self, args):
         self.depth = int(args[0][0])
