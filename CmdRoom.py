@@ -1,4 +1,5 @@
-# NOTE, this is just the starting point for what is eventually to be used in django models and holds no part to play in the actual app at run time...  
+# NOTE, this is just the starting point for what is eventually to be used in django models  
+# and holds no part to play in the actual app at run time...  
 # A room isnt always going to be a perfect square
 #     _______________
 #    /              /|
