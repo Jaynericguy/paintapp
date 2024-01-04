@@ -24,6 +24,7 @@ docker push jabl3s/paintapp-django-armv8
 ##  
 docker compose up -d --no-deps --build web    
 docker compose run web python manage.py makemigrations||migrate
+docker compose run web python manage.py createsuperuser
 ##  
  
 git remote -v    ==> check if its connecting via https or ssh, if not ssh do below for git push to work:::  
