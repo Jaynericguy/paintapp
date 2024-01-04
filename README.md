@@ -21,5 +21,7 @@ This django app creates and stores as many rooms as the slug randomness or datab
 DOCKER_BUILDKIT=1 docker build . -t jabl3s/paintapp-django-armv8  
 docker build . -t jabl3s/paintapp-django-armv8 --platform linux/arm64/v8  
 docker push jabl3s/paintapp-django-armv8  
+##  
+docker compose up -d --no-deps --build web  
 
   
