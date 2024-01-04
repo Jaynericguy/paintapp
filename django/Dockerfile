@@ -5,12 +5,14 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK 1
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY . .
-
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install -r requirements.txt
+# https://stackoverflow.com/questions/34398632/docker-how-to-run-pip-requirements-txt-only-if-there-was-a-change
+COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
+
+RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt --upgrade-strategy only-if-needed
+
+COPY . .
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000
