@@ -30,6 +30,6 @@ git remote -v    ==> check if its connecting via https or ssh, if not ssh do bel
 git remote set-url origin git@github.com:junder-git/K3scluster_django_postgres_demo_app.git  
   
 git pull         ==> If updating locally via git pull be sure to delete any local conflicting files then run pull 
-git commit       ==> Ctrl+o for nano write save  ==> Ctrl+x for nano exit and save  
+git commit       ==> Ctrl+o ==> Ctrl+x for nano save  
 git push  
   
