@@ -24,5 +24,10 @@ docker push jabl3s/paintapp-django-armv8
 ##  
 docker compose up -d --no-deps --build web    
 docker compose run web python manage.py makemigrations||migrate
-
+##  
+git remote -v  ==> check if its connecting via https or ssh, if not ssh do below for git push to work:::  
+git remote set-url origin git@github.com:junder-git/K3scluster_django_postgres_demo_app.git  
+git pull  
+git commit  ==> Ctrl+o for nano write save  ==> Ctrl+x for nano exit and save  
+git push  
   
