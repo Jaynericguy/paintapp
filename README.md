@@ -22,6 +22,8 @@ DOCKER_BUILDKIT=1 docker build . -t jabl3s/paintapp-django-armv8
 docker build . -t jabl3s/paintapp-django-armv8 --platform linux/arm64/v8  
 docker push jabl3s/paintapp-django-armv8  
 ##  
+LOCATION::: pi@pi-1:~/K3scluster_django_postgres_demo_app/django$   
+  
 docker compose up -d --no-deps --build web    
 docker compose run web python manage.py makemigrations||migrate  
 docker compose run web python manage.py createsuperuser
