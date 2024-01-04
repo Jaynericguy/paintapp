@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-_@5g06i6k86zkqwus^gapf_h2&-5ptqh#7w6@!9ldmq(fc65zl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['paint.junder.app']
-CSRF_TRUSTED_ORIGINS = ['https://paint.junder.app', 'https://www.paint.junder.app']
+ALLOWED_HOSTS = ['paint.junder.uk']
+CSRF_TRUSTED_ORIGINS = ['https://paint.junder.uk', 'https://www.paint.junder.uk']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'bootstrap5',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'paintapp/static/'
+STATIC_URL = 'static/'
 #MEDIA_URL = 'paintapp/media/'
 
 # Default primary key field type

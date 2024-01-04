@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views  #importing our view file
 
-urlprefix='paintapp/'
+#urlprefix='paintapp/'
 urlpatterns = [
-    path(urlprefix+'', views.viewHome, name='home'), #mapping the homepage function
-    path(urlprefix+'admin/', admin.site.urls, name='admin'),
-    path(urlprefix+'viewRooms/', views.viewRooms, name='viewRooms'), #mapping the homepage function
-    path(urlprefix+'addRooms/', views.addRooms, name='addRoom'), #mapping the homepage function
-    path(urlprefix+'viewRooms/<slug:slug>/', views.viewRoom, name='slugRoom')
+    path('', views.viewHome, name='home'), #mapping the homepage function//  urlprefix+'', views.viewHome, name='home'
+    path('admin/', admin.site.urls, name='admin'),
+    path('viewRooms/', views.viewRooms, name='viewRooms'), #mapping the homepage function /// path(urlprefix+'viewRooms/', views.viewRooms, name='viewRooms'),
+    path('addRooms/', views.addRooms, name='addRoom'), #mapping the homepage function /// path(urlprefix+'addRooms/', views.addRooms, name='addRoom'),
+    path('viewRooms/<slug:slug>/', views.viewRoom, name='slugRoom')
 ]
