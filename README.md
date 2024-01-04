@@ -26,7 +26,7 @@ LOCATION::: pi@pi-1:~/K3scluster_django_postgres_demo_app/django$
   
 docker compose up -d --no-deps --build web    
 docker compose run web python manage.py makemigrations||migrate  
-docker compose run web python manage.py createsuperuser
+docker compose run web python manage.py createsuperuser  ((user:junder pass:junder))
 ##  
  
 git remote -v    ==> check if its connecting via https or ssh, if not ssh do below for git push to work:::  
