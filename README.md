@@ -25,7 +25,7 @@ docker push jabl3s/paintapp-django-armv8
 LOCATION::: pi@pi-1:~/K3scluster_django_postgres_demo_app/django$   
   
 docker compose up -d --no-deps --build web    
-docker compose run web python manage.py makemigrations||migrate  
+docker compose run web python manage.py migrate||makemigrations  
 docker compose run web python manage.py createsuperuser  ((user:junder pass:junder))
 ##  
  
