@@ -65,8 +65,8 @@ spec:
           volumeMounts:
             - name: django
               mountPath: /django
-              subPath: django
           image: junder92/paintapp-django:arm64
+          __active: true
           ports:
             - name: django
               expose: true
@@ -75,7 +75,6 @@ spec:
               hostPort: 8000
               _serviceType: ClusterIP
               _ipam: dhcp
-          __active: true
 #        - args:
 #            - string
 #          command:
