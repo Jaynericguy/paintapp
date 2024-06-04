@@ -86,7 +86,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-ROOT_URLCONF = 'paintapp.urls'
+ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
     {
@@ -104,7 +104,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'paintapp.wsgi.application'
+WSGI_APPLICATION = 'app.wsgi.application'
 
 
 # Database
