@@ -19,5 +19,5 @@ RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt 
 
 COPY /app .
 
-CMD ["python", "/django/app/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000

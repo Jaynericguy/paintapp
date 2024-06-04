@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paintapp-django
+  name: django
   annotations:
     {}
   labels:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-paintapp-django
+    workload.user.cattle.io/workloadselector: apps.deployment-default-django
   namespace: default
 spec:
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: apps.deployment-default-paintapp-django
+      workload.user.cattle.io/workloadselector: apps.deployment-default-django
   template:
     metadata:
       labels:
-        workload.user.cattle.io/workloadselector: apps.deployment-default-paintapp-django
+        workload.user.cattle.io/workloadselector: apps.deployment-default-django
       namespace: default
     spec:
       containers:
@@ -27,27 +27,19 @@ spec:
             allowPrivilegeEscalation: false
           _init: false
           volumeMounts:
-            - name: app
-              mountPath: /app
+            - name: django
+              mountPath: /django
           image: junder92/paintapp-django:arm64
           ports:
-            - name: 8000tcp
+            - name: django
               expose: true
               protocol: TCP
               containerPort: 8000
-              hostIP: '8000'
+              hostPort: 8000
               _serviceType: ClusterIP
               _ipam: dhcp
-          env:
-            - name: POSTGRES_HOST
-              value: postgres.default
-            - name: POSTGRES_USER
-              value: postgres
-            - name: POSTGRES_PASSWORD
-              value: junder
-            - name: POSTGRES_DB
-              value: postgres
           __active: true
+      affinity:
       imagePullSecrets:
       initContainers:
       nodeName: 192.168.1.33
@@ -58,6 +50,7 @@ spec:
         - _type: hostPath
           hostPath:
             type: DirectoryOrCreate
-            path: /app
-          name: app
+            path: /django
+          name: django
+  replicas: 1
 __clone: true
