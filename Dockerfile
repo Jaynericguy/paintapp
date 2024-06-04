@@ -9,9 +9,8 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-RUN mkdir -p /django
-WORKDIR /django
-COPY . . 
+WORKDIR /
+COPY . /
 RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt --upgrade-strategy only-if-needed
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
