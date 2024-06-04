@@ -29,7 +29,7 @@ spec:
           volumeMounts:
             - name: vol-jhaea
               mountPath: ~/paintapp-django
-          image: junder92/paintapp-django-armv8
+          image: junder92/paintapp-django:arm64
           ports:
             - name: 8000tcp
               expose: true
