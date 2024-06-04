@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'app',
+    'paintapp',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -69,6 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 # Provider specific settings
@@ -85,7 +86,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-ROOT_URLCONF = 'app.urls'
+ROOT_URLCONF = 'paintapp.urls'
 
 TEMPLATES = [
     {
@@ -103,7 +104,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'app.wsgi.application'
+WSGI_APPLICATION = 'paintapp.wsgi.application'
 
 
 # Database

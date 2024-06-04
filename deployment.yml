@@ -65,7 +65,7 @@ spec:
           volumeMounts:
             - name: django
               mountPath: /django
-          image: junder92/paintapp-django:arm64
+          image: junder92/paintapp-django:arm64v8
           __active: true
           ports:
             - name: django

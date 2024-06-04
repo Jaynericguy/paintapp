@@ -2,7 +2,7 @@
 # import the standard Django Forms
 # from built-in library
 from django.forms import ModelForm
-from app.models import Room
+from paintapp.models import Room
 
 class RoomForm(ModelForm):
     class Meta:
