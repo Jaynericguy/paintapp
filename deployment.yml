@@ -27,8 +27,8 @@ spec:
             allowPrivilegeEscalation: false
           _init: false
           volumeMounts:
-            - name: vol-jhaea
-              mountPath: ~/paintapp-django
+            - name: app
+              mountPath: /app
           image: junder92/paintapp-django:arm64
           ports:
             - name: 8000tcp
@@ -58,6 +58,6 @@ spec:
         - _type: hostPath
           hostPath:
             type: DirectoryOrCreate
-            path: ~/paintapp-django
-          name: vol-jhaea
+            path: /app
+          name: app
 __clone: true
