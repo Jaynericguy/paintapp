@@ -12,12 +12,12 @@ ENV PYTHONUNBUFFERED=1
 
 ENV POSTGRES_HOST=default.postgres
 # https://stackoverflow.com/questions/34398632/docker-how-to-run-pip-requirements-txt-only-if-there-was-a-change
-WORKDIR /app 
-#check docker|rancher volume mounts are also at /app
+WORKDIR /django 
+#check docker|rancher volume mounts are also at /django
 COPY requirements.txt requirements.txt
 RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt --upgrade-strategy only-if-needed
 
-COPY /app .
+COPY /django .
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000
