@@ -9,8 +9,13 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
+
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+POSTGRES_USER = os.getenv("POSTGRES_USER")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+POSTGRES_DB = os.getenv("POSTGRES_DB")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -106,10 +111,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "junder",
-        "PASSWORD": "junder",
-        "HOST": "db",  # set in docker-compose.yml
+        "NAME": str(POSTGRES_DB),
+        "USER": str(POSTGRES_USER),
+        "PASSWORD": str(POSTGRES_PASSWORD),
+        "HOST": str(POSTGRES_HOST),  # set in docker-compose.yml
         "PORT": 5432,  # default postgres port
     }
 }
