@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paintapp-django
+  annotations:
+    {}
+  labels:
+    workload.user.cattle.io/workloadselector: apps.deployment-default-paintapp-django
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      workload.user.cattle.io/workloadselector: apps.deployment-default-paintapp-django
+  template:
+    metadata:
+      labels:
+        workload.user.cattle.io/workloadselector: apps.deployment-default-paintapp-django
+      namespace: default
+    spec:
+      containers:
+        - imagePullPolicy: Always
+          name: container-0
+          securityContext:
+            runAsNonRoot: false
+            readOnlyRootFilesystem: false
+            privileged: false
+            allowPrivilegeEscalation: false
+          _init: false
+          volumeMounts:
+            - name: vol-jhaea
+              mountPath: ~/paintapp-django
+          image: junder92/paintapp-django-armv8
+          ports:
+            - name: 8000tcp
+              expose: true
+              protocol: TCP
+              containerPort: 8000
+              hostIP: '8000'
+              _serviceType: ClusterIP
+              _ipam: dhcp
+          env:
+            - name: POSTGRES_HOST
+              value: postgres.default
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: junder
+            - name: POSTGRES_DB
+              value: postgres
+          __active: true
+      imagePullSecrets:
+      initContainers:
+      nodeName: 192.168.1.33
+      nodeSelector:
+        {}
+      restartPolicy: Always
+      volumes:
+        - _type: hostPath
+          hostPath:
+            type: DirectoryOrCreate
+            path: ~/paintapp-django
+          name: vol-jhaea
+__clone: true
