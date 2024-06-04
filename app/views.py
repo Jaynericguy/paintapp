@@ -1,7 +1,7 @@
 # import Http Response from django
 from django.shortcuts import render, redirect
-from paintapp.models import Room
-from paintapp.forms import RoomForm
+from app.models import Room
+from app.forms import RoomForm
 # create a function
 def viewHome(request):
     return render(request, "home.html")
