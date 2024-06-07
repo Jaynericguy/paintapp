@@ -18,9 +18,9 @@ Django + postgres  ==> Ive configured django with postgres in such a way that an
 This django app creates and stores as many rooms as the slug randomness or database size constraints for name width height depth slug creation-date allows, so quite a lot knowing postgres with such minimal info. Has been succesfully working in my rke cluster to modify any rooms I create, am just missing functionality screenshots/demo of https://github.com/jabl3s/OLD_rke1_arm_v1  :c         
   
 ### === USEFUL COMMANDS ===  
-DOCKER_BUILDKIT=1 docker build . -t jabl3s/paintapp-django-armv8  
-docker build . -t junder92/paintapp-django-armv8 --platform linux/arm64/v8  
-docker push junder92/paintapp-django-armv8  
+DOCKER_BUILDKIT=1 docker build . -t junder92/paintapp-django-armv8  
+docker build . -t junder92/paintapp-django:arm64v8 --platform linux/arm64/v8 
+docker push junder92/paintapp-django:arm64v8
 ##  
 LOCATION::: pi@pi-1:~/K3scluster_django_postgres_demo_app/django$   
   

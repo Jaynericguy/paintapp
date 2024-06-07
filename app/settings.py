@@ -9,13 +9,14 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-import os
+
 from pathlib import Path
 
-POSTGRES_HOST = os.getenv("POSTGRES_HOST")
-POSTGRES_USER = os.getenv("POSTGRES_USER")
-POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-POSTGRES_DB = os.getenv("POSTGRES_DB")
+#import os
+#POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+#POSTGRES_USER = os.getenv("POSTGRES_USER")
+#POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+#POSTGRES_DB = os.getenv("POSTGRES_DB")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,8 +31,8 @@ SECRET_KEY = 'django-insecure-_@5g06i6k86zkqwus^gapf_h2&-5ptqh#7w6@!9ldmq(fc65zl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['paint.junder.uk']
-CSRF_TRUSTED_ORIGINS = ['https://paint.junder.uk', 'https://www.paint.junder.uk']
+ALLOWED_HOSTS = ['django.junder.uk']
+CSRF_TRUSTED_ORIGINS = ['https://django.junder.uk', 'https://www.django.junder.uk']
 
 
 # Application definition
@@ -48,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'app',
+    'paintapp',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 # Provider specific settings
@@ -111,10 +113,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": str(POSTGRES_DB),
-        "USER": str(POSTGRES_USER),
-        "PASSWORD": str(POSTGRES_PASSWORD),
-        "HOST": str(POSTGRES_HOST),  # set in docker-compose.yml
+        "NAME": "postgres", #str(POSTGRES_DB),
+        "USER": "postgres", #str(POSTGRES_USER),
+        "PASSWORD": "junder", #str(POSTGRES_PASSWORD),
+        "HOST": "postgres.default", #str(POSTGRES_HOST),  # set in docker-compose.yml or rancher namespace
         "PORT": 5432,  # default postgres port
     }
 }
