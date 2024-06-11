@@ -9,16 +9,14 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-RUN mkdir -p /django
-
-WORKDIR /django
-
-COPY requirements.txt .
+COPY requirements.txt requirements.txt
 
 RUN pip install --no-cache-dir --upgrade pip \
   && pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY . django
+
+WORKDIR /django
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000
