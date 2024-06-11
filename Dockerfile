@@ -10,11 +10,15 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 RUN mkdir -p /django
-WORKDIR /django
-COPY requirements.txt .
-RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r requirements.txt --upgrade-strategy only-if-needed
-COPY . .
 
+WORKDIR /django
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir --upgrade pip \
+  && pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000
