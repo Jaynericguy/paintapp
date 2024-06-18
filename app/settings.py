@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_@5g06i6k86zkqwus^gapf_h2&-5ptqh#7w6@!9ldmq(fc65zl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['django.junder.uk']
 CSRF_TRUSTED_ORIGINS = ['https://django.junder.uk', 'https://www.django.junder.uk']
