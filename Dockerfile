@@ -10,8 +10,10 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /django
+RUN apk add python3-dev build-base linux-headers pcre-dev
+RUN pip install --no-cache-dir uwsgi
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["uwsgi", "--ini", "app.uwsgi.ini"]
 EXPOSE 8000
