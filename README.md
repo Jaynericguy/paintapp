@@ -21,6 +21,8 @@ This django app creates and stores as many rooms as the slug randomness or datab
 DOCKER_BUILDKIT=1 docker build . -t junder92/paintapp-django-armv8  
 docker build . -t junder92/paintapp-django:arm64v8 --platform linux/arm64/v8 
 docker push junder92/paintapp-django:arm64v8
+##
+python manage.py findstatic --verbosity 2 gif/room.gif
 ##  
 LOCATION::: pi@pi-1:~/K3scluster_django_postgres_demo_app/django$   
   
