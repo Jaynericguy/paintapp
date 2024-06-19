@@ -17,5 +17,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN mkdir /var/run/app-uwsgi
 RUN chown -R root:root /var/run/app-uwsgi
-CMD ["python", "manage.py", "collectstatic", "--noinput", "&&", "uwsgi", "--ini", "app.uwsgi.ini"]
+CMD ["sh", "-c", "python manage.py collectstatic --noinput && uwsgi --ini app.uwsgi.ini"]
 EXPOSE 8000
