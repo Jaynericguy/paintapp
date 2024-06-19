@@ -61,6 +61,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware", # 2nd from top
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -69,7 +70,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 # Provider specific settings
@@ -157,6 +157,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "static/"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 #MEDIA_URL = 'paintapp/media/'
 
 # Default primary key field type
