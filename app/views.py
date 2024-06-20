@@ -2,9 +2,14 @@
 from django.shortcuts import render, redirect
 from app.models import Room
 from app.forms import RoomForm
+from django.contrib.auth import logout
 # create a function
 def viewHome(request):
     return render(request, "home.html")
+
+def viewLogout(request):
+    logout(request)
+    return redirect("/")
 
 def viewRooms(request):
     context ={

@@ -22,7 +22,7 @@ from whitenoise.middleware import WhiteNoiseMiddleware
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+SITE_ID=1
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -76,6 +77,11 @@ MIDDLEWARE = [
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
+        "SCOPE":[
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS":{"access_type":"online"},
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
@@ -166,3 +172,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL="/"
+LOGOUT_REDIRECT_URL="/"
