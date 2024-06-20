@@ -23,6 +23,12 @@ docker build . -t junder92/paintapp-django:arm64v8 --platform linux/arm64/v8
 docker push junder92/paintapp-django:arm64v8
 ##
 python manage.py findstatic --verbosity 2 gif/room.gif
+##
+python manage.py dbshell
+-->     select * from django_migrations where app='app';
+You will see the output with ids next to all migrations. You may want to drop the migration that was applied before its dependency: <appname>.0016_auto_<date2>_<time2>. Say its id is 361:  
+mysql> delete from django_migrations where id=361;  
+Now out of the db shell, run python manage.py migrate again.  
 ##  
 LOCATION::: pi@pi-1:~/K3scluster_django_postgres_demo_app/django$   
   
