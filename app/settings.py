@@ -22,7 +22,7 @@ from whitenoise.middleware import WhiteNoiseMiddleware
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SITE_ID=1
+SITE_ID=3
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -85,11 +85,11 @@ SOCIALACCOUNT_PROVIDERS = {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        'APP': {
-            'client_id': '778606138458-dchb9i6hfh3k2545ap51k74jb0o97hue.apps.googleusercontent.com',
-            'secret': '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',
-            'key': ''
-        }
+        #'APP': {
+        #    ###
+        #    ###
+        #    ###
+        #}
     }
 }
 

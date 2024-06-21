@@ -21,7 +21,7 @@
           {% if user.is_authenticated %}
           <p>You are signed in as {{user.email}}</p>
           <div>
-            <a href="{% url 'home' %}"><button>Homepage</button></a>
+            <a href="{% url 'viewHome' %}"><button>Homepage</button></a>
             <a href="{% url 'viewRooms' %}"><button>View/Delete rooms</button>
             <a href="{% url 'addRoom' %}"><button>Add a room</button></a>
             <a href="{% url 'viewLogout' %}"><button>Logout</button></a>
